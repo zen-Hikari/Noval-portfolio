@@ -1,0 +1,155 @@
+.skill {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.container {
+    background-color: rgb(3, 5, 10);
+    margin-left: 20%;
+    margin-right: 20%;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding-bottom: 50px;
+}
+
+.skill-sec {
+    background-color: rgb(3, 5, 10);
+    margin-top: 1rem;
+}
+
+.skill-container {
+    background-color: rgb(3, 5, 10);
+
+}
+.circle {
+    background-color: rgb(3, 5, 10);
+}
+
+.skill-text h1 {
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    background-color: rgb(3, 5, 10);
+    padding-top: 20px;
+}
+
+
+
+.skill-desc {
+    margin-top: 1rem;
+    font-size: 18px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.skill-desc p {
+    background-color: rgb(3, 5, 10);    
+    text-transform: capitalize;
+}
+
+.penjelasan {
+    margin-top: 2rem;
+}
+
+.penjelasan p {
+    background-color: rgb(3, 5, 10);
+    font-size: 20px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.skill-sec {
+    display: flex;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+circle {
+    fill: none;
+    stroke-width: 10;
+}
+
+circle:first-child {
+    stroke: #818181;
+}
+
+circle.progress {
+    stroke: #4caf50;
+    stroke-dasharray: 283; /* Total length of the circle */
+    stroke-dashoffset: 283; /* Hidden progress by default */
+    transition: stroke-dashoffset 1s ease;
+}
+
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.skill-container h3 {
+    margin-top: -1rem;
+    z-index: 3;
+}
+
+.skill-circle {
+    position: relative;
+    width: 145px;
+    height: 145px;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); /* Rotasi supaya progress mulai dari atas */
+}
+
+circle {
+    fill: none;
+    stroke-width: 10;
+}
+
+circle:first-child {
+    stroke: #3b3057; 
+}
+
+circle.progress {
+    stroke:  rgb(177, 110, 255); 
+    stroke-dasharray: 283; /* Keliling lingkaran (2 * π * radius) */
+    stroke-dashoffset: 283; /* Mulai dari 0% progress */
+    transition: stroke-dashoffset 1s ease;
+}
+
+.skill-percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
+@media screen and (max-width: 945px) {
+    .container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .skill-sec {
+        flex-direction: column;
+    }
+
+    .skill-container {
+        margin: 0px;
+    }
+}

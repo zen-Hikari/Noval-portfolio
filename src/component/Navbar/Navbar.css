@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+* {
+    transition: all 0.4s;
+}
+
+header {
+    /* margin-top: 1rem; */
+    padding-top: 1rem;
+    position: relative;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Atur elemen antara logo dan nav-link */
+}
+
+
+
+nav .logo h1 {
+    font-size: 48px;
+    margin-left: 2rem;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    background: linear-gradient(to right,rgb(25, 25, 254), rgb(177, 110, 255), rgb(33, 170, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+nav .nav-link {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    /* clip-path: circle(0.4% at 100% 10%); */
+}
+
+nav .nav-link a {
+    font-size: 23px;
+    font-weight: 600;
+    margin-right: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+nav .nav-link a:hover {
+    transition: 0.3s ease; /* Mengurangi durasi transisi hover */
+    background: linear-gradient(to right,rgb(25, 25, 254), rgb(177, 110, 255), rgb(33, 170, 255));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+nav .nav-btn {
+    margin-right: 2rem;
+}
+
+nav .nav-btn a {
+    background: linear-gradient(to right,rgb(25, 25, 254), rgb(185, 123, 255));
+    padding: 13px 26px;
+    font-size: 23px;
+    font-weight: 800;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.ham-ico {
+    margin-right: 2rem;
+    display: none;
+}
+
+.ham-ico .icon {
+    font-size: 40px;
+    background: linear-gradient(to right,rgb(25, 25, 254), rgb(177, 110, 255));
+    padding: 0px 10px;
+    border-radius: 5px;
+}
+
+
+nav .nav-link.active, nav .nav-btn.active {
+    display: flex; 
+}
+
+
+
+
+@media screen and (max-width: 686px) {
+   header nav .ham-ico .icon {
+      font-size: 35px;
+   }
+
+   header nav .logo h1 {
+    font-size: 40px;
+   }
+}
+
+@media screen and (max-width: 998px) {
+    .ham-ico {
+        display: block; /* Tampilkan ikon hamburger di layar kecil */
+    }
+
+    nav .nav-link {
+        display: none; /* Sembunyikan link default di layar kecil */
+        margin-top: 2rem;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        z-index: 3;
+        background-color: rgb(152, 66, 250);
+        padding: 20px 90px 130px 50px;
+    }
+
+    nav .nav-link.active {
+        display: flex; /* Tampilkan link saat di-klik hamburger */
+    }
+
+    nav .nav-link a {
+        line-height: 6rem;
+        background-color: rgb(152, 66, 250);
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav .nav-btn {
+        display: none; /* Sembunyikan tombol secara default */
+        position: absolute;
+        right: 3.0rem;
+        top: 28rem;
+        z-index: 3;
+    }
+
+    nav .nav-btn.active {
+        display: block; /* Tampilkan tombol saat ada kelas 'active' */
+    }
+
+    nav .nav-btn a {
+        border: 2px solid black;
+        background: linear-gradient(to right, rgb(25, 25, 254), rgb(185, 123, 255));
+        padding: 13px 26px;
+        font-size: 23px;
+        font-weight: 800;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    /* Tambahkan aturan tambahan jika diperlukan */
+}
